@@ -1,0 +1,5 @@
+<% if @pages&.any? %>
+  <%= render partial: 'shared/pages', locals: { pages: @pages } %>
+<% else %>
+  <p class="ps-2">No results found</p>
+<% end %>

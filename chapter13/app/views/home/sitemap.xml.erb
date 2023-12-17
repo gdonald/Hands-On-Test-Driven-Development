@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<% Page.published.ordered.each do |p| -%>
+<url>
+  <loc><%= "#{@url}/page/#{p.slug}" %></loc>
+</url>
+<% end -%>
+<% Tag.all.each do |t| -%>
+<url>
+  <loc><%= "#{@url}/tag/#{t.name}" %></loc>
+</url>
+<% end -%>
+<% Page.month_year_list.each do |i| %>
+<url>
+  <loc><%= "#{@url}/search/#{i['year']}/#{i['month_number']}" %></loc>
+</url>
+<% end %>
+</urlset>

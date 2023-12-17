@@ -1,0 +1,8 @@
+<div>
+  <%= form_for(:search, url: search_path, method: :get) do %>
+    <div class="input-group">
+      <input type="search" name="term" class="form-control" />
+      <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+  <% end %>
+</div>

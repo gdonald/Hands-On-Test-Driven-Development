@@ -1,0 +1,9 @@
+<% pages.each do |page| %>
+  <%= render partial: 'shared/page',
+             locals: {
+               page: page,
+               content: page.summary
+             } %>
+<% end %>
+
+<%= paginate pages, theme: 'bootstrap-5' %>

@@ -1,0 +1,11 @@
+<div class="card p-3 mt-3">
+  <h4>Archives</h4>
+  <ul class="list-unstyled">
+  <% Page.month_year_list.each do |item| %>
+    <li class="pt-1">
+      <%= link_to "#{item['month_name']} #{item['year']}",
+                  "/search/#{item['year']}/#{item['month_number']}" %>
+    </li>
+  <% end %>
+  </ul>
+</div>
